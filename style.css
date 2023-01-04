@@ -29,6 +29,10 @@ h1 {
   font-size: 48px;
 }
 
+h2 {
+  font-size: 36px;
+}
+
 a {
   color: #565656;
 }
@@ -137,13 +141,16 @@ h1.heading-title {
   color: #131313;
 }
 
+strong {
+  color: #7421B0;
+}
+
 .heading-focus {
   position: relative;
   background: rgba(116, 33, 176, 0.16);
   /* #7421B0 */
   display: inline-block;
   padding: 0 6px;
-  color: #7421B0;
   border: 1px solid #7421B0;
 }
 
@@ -226,6 +233,45 @@ p.heading-description {
   transform: translateX(-50%);
 }
 
+.advantages {
+  margin-top: 300px;
+}
+
+.advantages-naming {
+  display: flex;
+  gap: 139px;
+  justify-content: start;
+}
+
+.advantages-title {
+  font-weight: 700;
+  color: #131313;
+}
+
+.advantages-descr {
+  max-width: 570px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 200%;
+  color: #828282;
+}
+
+.advantages-descr b {
+  color: #131313;
+}
+
+.advantages-list {
+  display: flex;
+  margin: 0;
+  list-style: none;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 1440px) {
   h1 {
     font-size: 36px;
@@ -265,6 +311,11 @@ p.heading-description {
 
   .heading-preview-cont {
     transform: translateX(100px);
+  }
+  
+  .advantages-naming {
+    gap: 0;
+    justify-content: space-between;
   }
 }
 
