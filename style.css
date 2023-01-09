@@ -667,6 +667,44 @@ p.heading-description {
   .advantages-title {
     font-size: 20px;
   }
+
+  .describe-text {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  /* .describe-item:nth-child(1) .describe-image-cont::before {
+    background-image: url(./media/describe-decor-1.png);
+    transform: translate(-35%, -31%);
+  }
+
+  .describe-item:nth-child(3) .describe-image-cont::before {
+    transform: translate(-35%, -31%);
+  } */
+
+  .describe-image-cont img {
+    transform: scale(0.85);
+  }
+
+  .describe-image-cont::before {
+    height: 120%;
+  }
+  .describe-item:nth-child(1) .describe-image-cont::before {
+    transform: translate(-39%, -25%);
+  }
+  .describe-item:nth-child(2) .describe-image-cont::before {
+    transform: translate(-7%, -21%);
+  }
+  .describe-item:nth-child(3) .describe-image-cont::before {
+    transform: translate(-38%, -20%);
+  }
+    .describe-item:nth-child(4) .describe-image-cont::before {
+    transform: translate(-12%, -17%);
+  }
+
+  .describe-list {
+    gap: 140px;
+  }
 }
 
 @media only screen and (max-width: 660px) {
@@ -758,6 +796,10 @@ p.heading-description {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .describe-image-cont img {
+    transform: scale(1);
   }
 }
 
