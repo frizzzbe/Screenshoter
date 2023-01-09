@@ -521,6 +521,59 @@ p.heading-description {
 }
 
 
+.container.functionality {
+  width: 95%;
+  background: linear-gradient(1.36deg, rgba(255, 255, 255, 0.5) 0.92%, rgba(255, 255, 255, 0) 61.36%), rgba(194, 166, 241, 0.05);
+  border: 4px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  /* Note: backdrop-filter has minimal browser support */
+  background-color: #efe7f5;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 70px;
+  padding: 100px 0 61px;
+  margin: 100px auto 0;
+}
+
+.container.functionality-content {
+  width: 75vw;
+}
+
+.functionality-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+  margin-top: 100px;
+}
+
+.functionality-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.functionality-item-img {
+  width: 111px;
+}
+
+.function-name {
+  margin-top: 50px;
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+
+.function-name .func-number {
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.function-list-content .simp-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 200%;
+  color: #828282;
+  margin-top: 30px;
+}
+
 
 @media screen and (max-width: 1840px) {
   .advantage-item .advantage-image {
