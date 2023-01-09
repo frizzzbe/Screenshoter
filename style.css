@@ -60,11 +60,23 @@ a:hover {
   outline: none;
   border: none;
   cursor: pointer;
-  transition: filter 0.5s;
+  transition: filter 0.3s;
 }
 
 .btn:hover {
   filter: brightness(1.1);
+}
+
+.btn.btn-black {
+  display: block;
+  margin: auto;
+  color: #FFFFFF;
+  background: #131313;
+  transition: box-shadow 0.2s;
+}
+
+.btn.btn-black:hover {
+  box-shadow: 0 0 15px -2px #131313;
 }
 
 .decoration {
@@ -277,9 +289,10 @@ p.heading-description {
   background: #FFFFFF;
   box-shadow: 0px 18px 45px -10px rgba(0, 0, 0, 0.13);
   border-radius: 10px;
-  padding: 60px;
+  padding: 45px;
   padding-top: 50px;
-  /* transition: all 0.3s; */
+  flex: 1;
+  transition: all 0.3s;
 }
 
 .advantage-item:hover {
@@ -297,36 +310,79 @@ p.heading-description {
   background-image: url('./media/advantage-1.svg');
 }
 
-.advantage-item:nth-child(1) .advantage-image {
+.list-1 .advantage-item:nth-child(1) .advantage-image {
   background-image: url('./media/advantage-1.svg');
 }
-
-.advantage-item:nth-child(2) .advantage-image {
+.list-1 .advantage-item:nth-child(2) .advantage-image {
   background-image: url('./media/advantage-2.svg');
 }
-
-.advantage-item:nth-child(3) .advantage-image {
+.list-1 .advantage-item:nth-child(3) .advantage-image {
   background-image: url('./media/advantage-3.svg');
 }
-
-.advantage-item:nth-child(4) .advantage-image {
+.list-1 .advantage-item:nth-child(4) .advantage-image {
   background-image: url('./media/advantage-4.svg');
 }
-
-.advantage-item:nth-child(1):hover .advantage-image {
+.list-1 .advantage-item:nth-child(1):hover .advantage-image {
   background-image: url('./media/advantage-light-1.svg');
 }
-
-.advantage-item:nth-child(2):hover .advantage-image {
+.list-1 .advantage-item:nth-child(2):hover .advantage-image {
   background-image: url('./media/advantage-light-2.svg');
 }
-
-.advantage-item:nth-child(3):hover .advantage-image {
+.list-1 .advantage-item:nth-child(3):hover .advantage-image {
   background-image: url('./media/advantage-light-3.svg');
 }
-
-.advantage-item:nth-child(4):hover .advantage-image {
+.list-1 .advantage-item:nth-child(4):hover .advantage-image {
   background-image: url('./media/advantage-light-4.svg');
+}
+
+.list-2 .advantage-item:nth-child(1) .advantage-image {
+  background-image: url('./media/advantage-5.svg');
+}
+.list-2 .advantage-item:nth-child(2) .advantage-image {
+  background-image: url('./media/advantage-6.svg');
+}
+.list-2 .advantage-item:nth-child(3) .advantage-image {
+  background-image: url('./media/advantage-7.svg');
+}
+.list-2 .advantage-item:nth-child(4) .advantage-image {
+  background-image: url('./media/advantage-8.svg');
+}
+.list-2 .advantage-item:nth-child(1):hover .advantage-image {
+  background-image: url('./media/advantage-light-5.svg');
+}
+.list-2 .advantage-item:nth-child(2):hover .advantage-image {
+  background-image: url('./media/advantage-light-6.svg');
+}
+.list-2 .advantage-item:nth-child(3):hover .advantage-image {
+  background-image: url('./media/advantage-light-7.svg');
+}
+.list-2 .advantage-item:nth-child(4):hover .advantage-image {
+  background-image: url('./media/advantage-light-8.svg');
+}
+
+.list-3 .advantage-item:nth-child(1) .advantage-image {
+  background-image: url('./media/advantage-9.svg');
+}
+.list-3 .advantage-item:nth-child(2) .advantage-image {
+  background-image: url('./media/advantage-10.svg');
+}
+.list-3 .advantage-item:nth-child(3) .advantage-image {
+  background-image: url('./media/advantage-11.svg');
+}
+.list-3 .advantage-item:nth-child(4) .advantage-image {
+  background-image: url('./media/advantage-12.svg');
+}
+.list-3 .advantage-item:nth-child(1):hover .advantage-image {
+  background-image: url('./media/advantage-light-9.svg');
+}
+.list-3 .advantage-item:nth-child(2):hover .advantage-image {
+  background-image: url('./media/advantage-light-10.svg');
+}
+.list-3 .advantage-item:nth-child(3):hover .advantage-image {
+  background-image: url('./media/advantage-light-11.svg');
+}
+.list-3 .advantage-item:nth-child(4):hover .advantage-image {
+  background-image: url('./media/advantage-light-12.svg');
 }
   
 .advantage-title {
@@ -340,6 +396,10 @@ p.heading-description {
 
 .advantage-item:hover .advantage-title {
   color: #FFFFFF;
+}
+
+.advantages .btn {
+  margin-top: 90px;
 }
 
 .describe-block {
@@ -473,7 +533,7 @@ p.heading-description {
   }
 
   .advantage-item {
-    padding: 40px;
+    padding: 30px;
     padding-top: 35px;
   }
 
@@ -552,6 +612,10 @@ p.heading-description {
     gap: 20px;
     justify-content: space-between;
   }
+
+  .advantage-title {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 960px) {
@@ -586,6 +650,10 @@ p.heading-description {
   .advantage-item {
     padding: 60px;
     flex-basis: 45%;
+  }
+  
+  .advantage-title {
+    font-size: 18px;
   }
 
   .describe-list .describe-item {
@@ -668,19 +736,14 @@ p.heading-description {
     font-size: 20px;
   }
 
+  .advantage-title {
+    font-size: 18px;
+  }
+
   .describe-text {
     margin-top: 20px;
     font-size: 14px;
   }
-
-  /* .describe-item:nth-child(1) .describe-image-cont::before {
-    background-image: url(./media/describe-decor-1.png);
-    transform: translate(-35%, -31%);
-  }
-
-  .describe-item:nth-child(3) .describe-image-cont::before {
-    transform: translate(-35%, -31%);
-  } */
 
   .describe-image-cont img {
     transform: scale(0.85);
@@ -801,13 +864,33 @@ p.heading-description {
   .describe-image-cont img {
     transform: scale(1);
   }
+
+  .describe-list {
+    gap: 90px;
+  }
+
+  .describe-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .describe-content {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .describe-content > div {
+    text-align: center;
+    width: 80%;
+  }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 420px) {
   /* mobile */
   .advantage-item {
     padding: 26px;
-    padding-right: 55px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -822,5 +905,15 @@ p.heading-description {
 
   .advantage-item .advantage-image {
     flex-shrink: 0;
+  }
+
+  .descr-image-text {
+    padding: 25px 30px;
+    font-size: 12px;
+  }
+
+  .describe-content > div {
+    text-align: center;
+    width: 100%;
   }
 }
