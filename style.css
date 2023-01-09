@@ -526,9 +526,6 @@ p.heading-description {
   background: linear-gradient(1.36deg, rgba(255, 255, 255, 0.5) 0.92%, rgba(255, 255, 255, 0) 61.36%), rgba(194, 166, 241, 0.05);
   border: 4px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px);
-  /* Note: backdrop-filter has minimal browser support */
-  background-color: #efe7f5;
-  /* Note: backdrop-filter has minimal browser support */
   border-radius: 70px;
   padding: 100px 0 61px;
   margin: 100px auto 0;
@@ -602,13 +599,52 @@ p.heading-description {
   color: #7421B0;
 }
 
-.howto-img {
-  width: 100%;
-  object-fit: cover;
-  height: 260px;
+.howto-img-cont {
+  position: relative;
   margin-top: 60px;
+  width: 100%;
+  /* height: 260px; */
   box-shadow: 0px 18px 45px -10px rgba(0, 0, 0, 0.13);
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.howto-item .howto-img-cont .btn {
+  margin: 0;
+  padding: 23px 41px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  display: none;
+}
+
+.howto-img-cont::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.howto-img-cont:hover::before {
+  backdrop-filter: blur(10px);
+}
+
+.howto-img-cont:hover .btn {
+  display: block;
+}
+
+.howto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .howto-name {
