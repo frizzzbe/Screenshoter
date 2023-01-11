@@ -267,20 +267,43 @@
       <h1 class="faq-title">FAQ</h1>
       <ol class="faq-list">
         <li class="faq-item">
-          <!-- <span class="faq-number">01.</span> -->
           <div class="faq-content">
             <p class="faq-item-title">Платная ли программа?</p>
             <p class="faq-item-descr simp-txt">Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или использование программы — все функции бесплатные</p>
           </div>
-          <button calss="faq-item-close" type="button" title="close"></button>
+          <button class="faq-item-btn" type="button" title="close"></button>
         </li>
         <li class="faq-item">
-          <!-- <span class="faq-number">01.</span> -->
           <div class="faq-content">
-            <p class="faq-item-title">Платная ли программа?</p>
+            <p class="faq-item-title">Для каких платформ доступен Screenshoter?</p>
+            <div class="faq-item-descr simp-txt">
+              <p class="simp-txt">Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или использование программы — все функции бесплатные</p>
+              <p class="simp-txt">Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или использование программы — все функции бесплатные</p>
+              <p class="simp-txt">Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или использование программы — все функции бесплатные</p>
+            </div>
+          </div>
+          <button class="faq-item-btn" type="button" title="close"></button>
+        </li>
+        <li class="faq-item">
+          <div class="faq-content">
+            <p class="faq-item-title">Чем Screenshoter отличается от других программ для создания скриншотов?</p>
             <p class="faq-item-descr simp-txt">Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или использование программы — все функции бесплатные</p>
           </div>
-          <button calss="faq-item-close" type="button" title="close"></button>
+          <button class="faq-item-btn" type="button" title="close"></button>
+        </li>
+        <li class="faq-item">
+          <div class="faq-content">
+            <p class="faq-item-title">Куда сохраняются скриншоты и видео?</p>
+            <p class="faq-item-descr simp-txt">Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или использование программы — все функции бесплатные</p>
+          </div>
+          <button class="faq-item-btn" type="button" title="close"></button>
+        </li>
+        <li class="faq-item">
+          <div class="faq-content">
+            <p class="faq-item-title">Можно ли удалить файлы с сервера в пару кликов?</p>
+            <p class="faq-item-descr simp-txt">Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или использование программы — все функции бесплатные</p>
+          </div>
+          <button class="faq-item-btn" type="button" title="close"></button>
         </li>
       </ol>
     </section>
@@ -290,5 +313,17 @@
     <!-- btn download -->
 <!-- Добавить все полосы stripe и background artefacts -->
   </footer>
+
+  <script>
+    let faqCont = document.querySelector('.faq-list');
+    
+    if (faqCont) {
+      faqCont.addEventListener('click', (event)=> {
+        if (event.target.closest('.faq-item-btn')) {
+          event.target.closest('.faq-item').classList.toggle('open');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
