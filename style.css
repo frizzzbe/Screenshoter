@@ -753,9 +753,12 @@ section.functionality {
   margin-top: 60px;
 }
 
-.container.faq {
+.faq {
+  background: linear-gradient(123.35deg, rgba(235, 243, 208, 0.05) 0%, rgba(235, 243, 208, 0) 18.4%), radial-gradient(29.9% 70.94% at 44.25% 86.96%, rgba(220, 141, 220, 0.05) 0%, rgba(220, 141, 220, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(33.83% 53.57% at 35.87% 100%, rgba(220, 141, 220, 0.05) 0%, rgba(220, 141, 220, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(42.66% 49.72% at 45.56% 44.65%, rgba(203, 173, 235, 0.05) 0%, rgba(194, 166, 241, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(134.59deg, rgba(205, 249, 232, 0.05) 20.63%, rgba(205, 249, 232, 0) 47.84%), linear-gradient(216.44deg, rgba(192, 169, 240, 0) -16.52%, rgba(192, 169, 240, 0.05) -1.04%, rgba(192, 169, 240, 0) 16.99%), linear-gradient(128.53deg, rgba(192, 169, 240, 0) 28.63%, rgba(192, 169, 240, 0.05) 38.5%, rgba(192, 169, 240, 0) 50.26%), radial-gradient(40.75% 97.37% at 90.75% 40.15%, rgba(255, 253, 177, 0.05) 0%, rgba(254, 228, 191, 0.05) 34.46%, rgba(240, 189, 208, 0.05) 69.5%, rgba(255, 129, 38, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(194, 166, 241, 0.05);
   position: relative;
   margin-top: 100px;
+  padding-top: 90px;
+  padding-bottom: 180px;
 }
 
 .faq-title {
@@ -773,13 +776,13 @@ section.functionality {
   display: flex;
 
   background: rgba(196, 196, 196, 0.1);
-  border: 4px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(20px);
   border-radius: 16px;
   overflow: hidden;
 
   max-height: 215px;
-  transition: all 1.7s;
+  transition: 1.5s ease max-height;
 }
 
 .faq-item::before {
@@ -879,6 +882,36 @@ section.functionality {
   background-image: url('./media/faq-decor-3.png');
 }
 
+.ending {
+  margin-top: 200px;
+}
+
+.ending-cont {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+.ending-cont .ending-body {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: start;
+  padding-right: 60px;
+}
+
+.ending-cont > img {
+  width: 50%;
+}
+
+.ending-cont .ending-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 140%;
+  color: #131313;
+}
 
 @media screen and (max-width: 1840px) {
   .advantage-item .advantage-image {
@@ -966,7 +999,8 @@ section.functionality {
   }
 
   .functionality-title,
-  .howto-title {
+  .howto-title,
+  .ending-cont .ending-text {
     font-size: 30px;
   }
 }
@@ -1025,6 +1059,25 @@ section.functionality {
   .howto-num {
     font-size: 28px;
     line-height: 30px;
+  }
+
+  .ending {
+    margin-top: 75px;
+  }
+
+  .ending-cont {
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  .ending-cont > img {
+    width: 80%;
+    align-self: start;
+  }
+
+  .ending-cont .ending-body {
+    padding: 0;
+    align-items: center;
   }
 }
 
@@ -1133,6 +1186,10 @@ section.functionality {
 
   .function-list-content .simp-txt {
     line-height: 150%;
+  }
+
+  .ending-cont .ending-body {
+    max-width: 422px;
   }
 }
 
@@ -1254,6 +1311,34 @@ section.functionality {
 
   .advantages.adv-list-3 .advantages-naming > *{
     flex: 1;
+  }
+
+  .faq-decor.decor-1 {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .faq-decor.decor-2 {
+    width: 200px;
+    height: 300px;
+  }
+  
+  .faq-decor.decor-3 {
+    width: 220px;
+    height: 300px;
+  }
+
+  .ending-cont .ending-text {
+    font-size: 24px;
+  }
+
+  .ending-body .btn {
+    color: #FFFFFF;
+    background: #131313;
+  }
+  
+  .ending-body .btn:hover {
+    box-shadow: 0 0 15px -2px #131313;
   }
 }
 
@@ -1444,6 +1529,40 @@ section.functionality {
 
   .tooltip-decor {
     right: 60%;
+  }
+
+  .faq-item {
+    max-height: 330px;
+    flex-direction: column;
+  }
+
+  .faq-content {
+    margin-left: 0;
+    margin-top: 60px;
+    /* padding-right: 45px; */
+  }
+
+  .faq-item-title {
+    font-size: 20px;
+  }
+
+  .ending-cont {
+    gap: 110px;
+  }
+
+  .ending-cont > img {
+    width: 100%;
+    transform: scale(1.3) translateX(-8%);
+  }
+
+  .ending-cont .ending-text {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .ending-cont .ending-body {
+    min-width: 345px;
+    width: 55%;
   }
 }
 
