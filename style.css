@@ -590,7 +590,8 @@ section.functionality {
   margin: 100px auto 0;
 }
 
-.func-decor {
+.func-decor,
+.faq-decor {
   position: absolute;
   content: "";
   display: block;
@@ -753,6 +754,7 @@ section.functionality {
 }
 
 .container.faq {
+  position: relative;
   margin-top: 100px;
 }
 
@@ -836,6 +838,7 @@ section.functionality {
   cursor: pointer;
   transform: rotate(0);
   transform-origin: 50% 50%;
+  -webkit-tap-highlight-color: transparent;
   will-change: transform;
   transition: transform 0.3s;
 
@@ -849,6 +852,31 @@ section.functionality {
 
 .faq-item.open .faq-item-btn {
   transform: rotate(45deg);
+}
+
+
+.faq-decor.decor-1 {
+  width: 300px;
+  height: 300px;
+  top: 190px;
+  left: -11%;
+  background-image: url('./media/faq-decor-1.png');
+}
+
+.faq-decor.decor-2 {
+  width: 280px;
+  height: 400px;
+  top: 390px;
+  right: 25%;
+  background-image: url('./media/faq-decor-2.png');
+}
+
+.faq-decor.decor-3 {
+  width: 220px;
+  height: 300px;
+  top: 800px;
+  right: -11%;
+  background-image: url('./media/faq-decor-3.png');
 }
 
 
