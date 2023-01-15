@@ -20,16 +20,16 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Функции </a>
+          <a href="#functions" class="nav-link">Функции </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Преимущества </a>
+          <a href="#describe" class="nav-link">Преимущества </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Как использовать </a>
+          <a href="#how-to" class="nav-link">Как использовать </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Частые вопросы </a>
+          <a href="#faq" class="nav-link">Частые вопросы </a>
         </li>
         <li class="mob-menu-burger">
           <img src="./media/stats.svg" alt="Mob menu">
@@ -38,21 +38,26 @@
     </nav>
     <div class="mob-menu">
       <div class="container">
-        <button class="close-mob-menu">
-          <img src="./media/faq-btn.svg" alt="Mob menu">
-        </button>
+        <div class="mob-menu-head">
+          <a href="#" class="mob-menu-logo">
+            <img src="./media/logo.png" alt="Company logo">
+          </a>
+          <button class="close-mob-menu">
+            <img src="./media/faq-btn.svg" alt="Mob menu">
+          </button>
+        </div>
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#" class="nav-link">Функции </a>
+            <a href="#functions" class="nav-link">Функции </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Преимущества </a>
+            <a href="#describe" class="nav-link">Преимущества </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Как использовать </a>
+            <a href="#how-to" class="nav-link">Как использовать </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Частые вопросы </a>
+            <a href="#faq" class="nav-link">Частые вопросы </a>
           </li>
         </ul>
       </div>
@@ -70,7 +75,7 @@
           Вместе со Screenshoter можно в один клик сделать снимок или записать происходящее на экране ПК, чтобы поделиться с кем угодно
         </p>
         <button class="btn heading-btn">Скачать бесплатно</button>
-        <a class="scroll-down" href="#">
+        <a class="scroll-down" href="#functions">
           <img src="./media/scroll-down.svg" alt="">
         </a>
       </div>
@@ -79,7 +84,7 @@
         <p class="preview-desc">Бесплатная программа для Windows</p>
       </div>
     </section>
-    <section class="container advantages">
+    <section class="container advantages" id="functions">
       <div class="advantages-naming">
         <h2 class="advantages-title">Встречайте — скриншоты <br>
           и запись экрана <strong>2 в 1</strong></h2>
@@ -105,7 +110,7 @@
         </li>
       </ul>
     </section>
-    <section class="container describe-block">
+    <section class="container describe-block" id="describe">
       <div class="decoration decoration-stripe str-2"></div>
       <div class="decoration decoration-stripe str-3"></div>
       <ul class="describe-list">
@@ -221,7 +226,7 @@
             </li>
           </ol>
 
-          <div class="howto-block">
+          <div class="howto-block" id="how-to">
             <h2 class="howto-title">Как использовать <strong>Screenshoter</strong></h2>
             <ol class="howto-list">
               <li class="howto-item">
@@ -284,7 +289,7 @@
         </li>
       </ul>
     </section>
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="faq-decor decor-1"></div>
       <div class="faq-decor decor-2"></div>
       <div class="faq-decor decor-3"></div>
@@ -333,7 +338,7 @@
         </ol>
       </div>
     </section>
-    <section class="ending">
+    <section class="ending" id="back">
       <div class="ending-cont">
         <div class="decoration decoration-stripe str-4"></div>
         <img src="./media/ending-image.png" alt="footer decor">
@@ -353,13 +358,13 @@
         <div class="product-nav-list">
           <a href="#" class="footer-link">Продукт</a>
           <ul class="product-list">
-            <li class="product-list-tem"><a href="#">Функции</a></li>
-            <li class="product-list-tem"><a href="#">Преимущества</a></li>
-            <li class="product-list-tem"><a href="#">Как использовать</a></li>
+            <li class="product-list-tem"><a href="#functions">Функции</a></li>
+            <li class="product-list-tem"><a href="#describe">Преимущества</a></li>
+            <li class="product-list-tem"><a href="#how-to">Как использовать</a></li>
           </ul>
         </div>
-        <a href="#" class="footer-link">Обратная связь</a>
-        <a href="#" class="footer-link">Политика конфиденциальности</a>
+        <a href="#back" class="footer-link">Обратная связь</a>
+        <a href="#back" class="footer-link">Политика конфиденциальности</a>
       </nav>
     </div>
   </footer>
@@ -367,6 +372,7 @@
 <!-- fixed overflow or not -->
   <script>
     let faqCont = document.querySelector('.faq-list');
+        btnDownload = document.querySelectorAll('.btn');
     
     if (faqCont) {
       faqCont.addEventListener('click', (event)=> {
@@ -376,6 +382,10 @@
         }
       });
     }
+
+    btnDownload.forEach(i => i.addEventListener('click', ()=>{
+      alert('Это тренировочный проект, а приложение в нём - вымышленное ))');
+    }));
 
     let burgerOpenBtn = document.querySelector('.mob-menu-burger'),
         burgerCloseBtn = document.querySelector('.close-mob-menu'),
