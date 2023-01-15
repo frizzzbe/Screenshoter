@@ -36,6 +36,27 @@
         </li>
       </ul>
     </nav>
+    <div class="mob-menu">
+      <div class="container">
+        <button class="close-mob-menu">
+          <img src="./media/faq-btn.svg" alt="Mob menu">
+        </button>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Функции </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Преимущества </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Как использовать </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Частые вопросы </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
   <main>
     <section class="container main-heading heading-content">
@@ -343,6 +364,7 @@
     </div>
   </footer>
 <!-- мобильное менб JS -->
+<!-- fixed overflow or not -->
   <script>
     let faqCont = document.querySelector('.faq-list');
     
@@ -354,6 +376,24 @@
         }
       });
     }
+
+    let burgerOpenBtn = document.querySelector('.mob-menu-burger'),
+        burgerCloseBtn = document.querySelector('.close-mob-menu'),
+        mobMenuLinks = document.querySelectorAll('.mob-menu .nav-link'),
+        mobMenu = document.querySelector('.mob-menu');
+    
+    burgerOpenBtn.addEventListener('click', (event)=> {
+      mobMenu.style.display = "block";
+    });
+
+    burgerCloseBtn.addEventListener('click', (event)=> {
+      mobMenu.style.display = "none";
+    });
+
+    mobMenuLinks.forEach(i => i.addEventListener('click', (event)=> {
+      mobMenu.style.display = "none";
+    }))
+
   </script>
 </body>
 </html>
