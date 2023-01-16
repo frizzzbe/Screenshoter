@@ -1,3 +1,12 @@
+@keyframes wave {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(15%);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -93,6 +102,7 @@ a:hover {
   height: 250px;
   background: url('./media/donut-1.png') no-repeat center;
   background-size: contain;
+  animation: wave 8s ease-in 0s infinite alternate;
 }
 
 .decoration-stripe {
@@ -154,7 +164,9 @@ a:hover {
 }
 
 .mob-menu-head {
-  margin-top: 26px;
+  position: absolute;
+  width: 100%;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -225,6 +237,7 @@ p.heading-description {
   height: 46px;
   margin-top: 126px;
   text-align: center;
+  animation: wave 1s ease-in 0s infinite alternate;
 }
 
 .heading-preview-cont {
@@ -277,7 +290,7 @@ p.heading-description {
 }
 
 .advantages {
-  margin-top: 300px;
+  margin-top: 200px;
 }
 
 .advantages-naming {
@@ -342,6 +355,7 @@ p.heading-description {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  animation: wave 5s ease-in 0s infinite alternate;
 }
 
 .advantages-descr {
@@ -549,9 +563,14 @@ p.heading-description {
   transform: translate(-11%, -27%);
 }
 
-.describe-image-cont img{
+.describe-image {
   filter: drop-shadow(0px 18px 45px rgba(0, 0, 0, 0.13));
   width: 100%;
+  transition: filter .5s;
+}
+
+.describe-image:hover {
+  filter: none;
 }
 
 .describe-content {
@@ -646,11 +665,13 @@ section.functionality {
   top: -5%;
   right: 11%;
   background-image: url('./media/func-decor-1.png');
+  animation: wave 7s ease-in 0s infinite alternate;
 }
 .func-decor.decor-2 {
   top: 19%;
   left: -6%;
   background-image: url('./media/func-decor-2.png');
+  animation: wave 7s ease-in 1.4s infinite alternate;
 }
 .func-decor.decor-3 {
   width: 500px;
@@ -658,6 +679,7 @@ section.functionality {
   top: 45%;
   right: -12%;
   background-image: url('./media/func-decor-3.png');
+  animation: wave 7s ease-in 1.2s infinite alternate;
 }
 
 .container.functionality-content {
@@ -902,6 +924,7 @@ section.functionality {
   height: 300px;
   top: 190px;
   left: 2%;
+  animation: wave 7s ease-in 0s infinite alternate;
   background-image: url('./media/faq-decor-1.png');
 }
 
@@ -910,6 +933,7 @@ section.functionality {
   height: 400px;
   top: 390px;
   right: 35%;
+  animation: wave 7s ease-in 1.2s infinite alternate;
   background-image: url('./media/faq-decor-2.png');
 }
 
@@ -918,6 +942,7 @@ section.functionality {
   height: 300px;
   top: 800px;
   right: 5%;
+  animation: wave 7s ease-in 2.6s infinite alternate;
   background-image: url('./media/faq-decor-3.png');
 }
 
@@ -1183,7 +1208,6 @@ section.functionality {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: block;
     background-color: #fff;
     z-index: 1;
   }
@@ -1498,6 +1522,10 @@ section.functionality {
   
   .ending-body .btn:hover {
     box-shadow: 0 0 15px -2px #131313;
+  }
+
+  .mob-menu-head {
+    margin-top: 26px;
   }
 }
 
