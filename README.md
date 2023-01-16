@@ -1,2 +1,2 @@
 # Screenshoter
-Landing page for screenshoter app
+Landing page for [Screenshoter](https://frizzzbe.github.io/Screenshoter/) app
